@@ -14,6 +14,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // Cấu hình Swagger
+swaggerDocument.host = process.env.HOST;
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Định nghĩa route API
