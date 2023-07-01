@@ -15,6 +15,7 @@ app.use(bodyParser.json());
 
 // Cấu hình Swagger
 swaggerDocument.host = process.env.HOST;
+swaggerDocument.schemes = process.env.SCHEMES;
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Định nghĩa route API
